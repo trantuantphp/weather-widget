@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import RouterWrapper from "routes";
 import Loading from "shared/components/Loading";
 import reportWebVitals from "./reportWebVitals";
+import "antd/dist/antd.css";
+import "styles/index.scss";
 
 ReactDOM.render(
   <React.StrictMode>

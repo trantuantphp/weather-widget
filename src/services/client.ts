@@ -12,7 +12,7 @@ client.interceptors.request.use(
 );
 
 client.interceptors.response.use(
-  (response) => response.data,
+  (response) => response,
   (error) => Promise.reject(error)
 );
 

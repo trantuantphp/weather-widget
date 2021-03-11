@@ -2,13 +2,17 @@ import client from './client';
 import { API_KEY } from "shared/constants";
 import { AxiosResponse } from 'axios';
 
-interface ResponseLocation {
+export interface ResponseLocation {
     name: string;
     lat: number;
-    long: number;
+    lon: number;
     country: string;
-    state?: string;
-    local_names: any
+    // state?: string;
+    // local_names: {
+    //   en: string;
+    //   feature_name: string,
+    //   ascii: string,
+    // }
 }
 
 export function getLocationByName(name: string): Promise<AxiosResponse<ResponseLocation[]>> {
@@ -17,6 +21,7 @@ export function getLocationByName(name: string): Promise<AxiosResponse<ResponseL
     q: name,
     limit: 1,
     appid: API_KEY,
+    lang: "en"
   };
   return client.get(prefix, { params });
 }
