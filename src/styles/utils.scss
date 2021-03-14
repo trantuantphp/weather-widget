@@ -1,8 +1,33 @@
+// display
 .d {
   &__flex {
     display: flex !important;
+  }
+  &__block {
+    display: block !important;
   }
   &__iblock {
     display: inline-block !important;
   }
 }
+
+//width
+.w {
+  &__100 {
+    width: 100% !important;
+  }
+  &__50 {
+    width: 50% !important;
+  }
+}
+
+//height
+.h {
+  &__100 {
+    height: 100% !important;
+  }
+}
+
+// margin
+
+// padding
